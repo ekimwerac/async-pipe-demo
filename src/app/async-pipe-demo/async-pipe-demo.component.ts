@@ -13,7 +13,11 @@ import { Observable } from 'rxjs';
       <p>Fetching data from a mocked REST API...</p>
       <div *ngIf="data$ | async as data">
         <p><strong>ID:</strong> {{ data.id }}</p>
-        <p><strong>Name:</strong> {{ data.name }}</p>
+        <p><strong>Name:</strong> {{ data.name| uppercase }}</p>
+      </div>
+      <div *ngIf="data$ | async as data">
+        <p><strong>ID:</strong> {{ data.id }}</p>
+        <p><strong>Name:</strong> {{ data.name|lowercase }}</p>
       </div>
     </div>
   `,
